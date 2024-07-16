@@ -12,8 +12,63 @@
 
 
     <body>
+        <div id="content">
 
-        
-        <script src="" async defer></script>
+            <!--Task 1 
+            Display the date when user click on the button and when user click on the button call the 
+            display date function.
+            -->
+            <p id = "date">hi I am ready to display the date just click on the button.</p>
+            <button type="button" onclick="displayDate()">Click To display the date</button>
+
+            <!-- Task 2
+            change the content of the paragraph when user click on the button 
+            -->
+            <p id = "changeText"> Hello how are you?</p>
+            <button type="button" onclick="changeContent()">Click on me !!!</button>
+
+            <!-- Task 3
+            change the image when user click on the button
+            -->
+            <br><br>
+            <!-- I use break tag here as image is an inline element so to display it on next line i add break-->
+            <img src="../Images/images.jpeg" title="My First Image" id="image1" height = "100px" width = "100px"
+            alt="Sorry we are not able to displya picture due to technical issues">
+            <br>
+            <button type="button" onclick="changeImage()">Click to Change Image</button>
+
+            <!--Task 4
+            Change the font size of the paragrap
+            -->
+            <p id="p1">Hi I am learning JavaScript DO you wan to learn with me......</p>
+            <button type="button" onclick="changeFontSize()">Click to change the Size of the Text.</button>
+
+        </div>
+        <!--Task 5
+        Show and Hide the any Content wrap up in the div tag
+        -->
+        <br>
+        <button type="button" onclick="document.getElementById('content').style.display = 'block'">Show the Content</button>
+        <button type="button" onclick="document.getElementById('content').style.display = 'none'">Hide the Content</button>
+
+        <script async defer>
+            function displayDate(){
+                document.getElementById('date').innerHTML = Date()
+            }
+
+            function changeContent(){
+                document.getElementById('changeText').innerHTML = "I am good and doing well Thanks for asking"
+            }
+
+            function changeImage(){
+                document.getElementById('image1').src = '../Images/img_212671_1.jpg'
+                document.getElementById('image1').style.width = '100px'
+                document.getElementById('image1').style.height = '100px'
+            }
+
+            function changeFontSize(){
+                document.getElementById('p1').style.fontSize = '2rem'
+            }
+        </script>
     </body>
   </html>
