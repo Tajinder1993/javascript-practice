@@ -7,9 +7,9 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../External Files/scripts.js" async defer></script>
         <link rel="stylesheet" href="">
     </head>
-
 
     <body>
         <div id="content">
@@ -51,6 +51,9 @@
         <button type="button" onclick="document.getElementById('content').style.display = 'block'">Show the Content</button>
         <button type="button" onclick="document.getElementById('content').style.display = 'none'">Hide the Content</button>
 
+        <!-- Task 6
+        write all the script under the script tag 
+        -->
         <script async defer>
             function displayDate(){
                 document.getElementById('date').innerHTML = Date()
@@ -70,5 +73,39 @@
                 document.getElementById('p1').style.fontSize = '2rem'
             }
         </script>
+
+        <!--Task 7
+        write the script in the external script file. It is place under the head tag.
+        -->
+
+        <!--Task 8
+        display the data into the data using
+        1. document.getelementbyid().innerhtml
+        2. document.write()
+        3. windows.alert()
+        4. console.log()
+        -->
+
+        <!--Using document.write() after an HTML document is loaded, will delete all existing HTML-->
+        <button type="button" onclick="document.write(5+6)">Click On Me And See The Magic.</button>
+        <p id="output"></p>
+        <script>
+
+            // This function is widely used while working with the javas cript.
+            document.getElementById("output").innerHTML = "Hi, I am try to use the doucment.getElementById().innerHTML "+
+            "method to print the output on the screen."
+
+            //This function print the output on the browser screen. This function is normally used for testing purpose.
+            document.write("I am document.write() method.......")
+
+            // This function display the output in pop ups
+            window.alert("I am window.alert() method..........")
+
+            // This function directly write the output on the console (open the developer tool and click on the console tab)
+            console.log("I am console.log() method.............")
+        </script>
+    
+    <!-- This function is used to print the page when user click on the button.-->
+    <button type="button" onclick="window.print()">Click On Me To Print.</button>
     </body>
   </html>
