@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Working with the Varibles</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      <!--Task 1
+      print the number on the screen without the variables
+      -->
+
+      <p id="output">when the page loads the contnet of the parapgraph will change.</p>
+
+      <p id="output1">The content is change when the page load but value comes from a variable.</p>
+        
+      <p id="output2">Undeclared variables </p>
+
+      <p id="output3">variable declare with keyword var.</p>
+
+      <p id="output4">variable declare with keyword let.</p>
+
+      <p id="output5">variable declare with keyword const.</p>
+
+      <p id="output6">varible is declare but values is not assigned then it show undefined.</p>
+        <script>
+            document.getElementById('output').innerHTML = "Tajinder Kaur"
+
+            let x = "Tajinder kaur "+ " age is "+ 30
+            document.getElementById("output1").innerHTML = x;
+
+            //variables are automatically declared
+            //but it is not a good programming practice to use the undeclared variables
+            // always declare the variables
+            x =20;
+            y =50;
+            z = x+y;
+            document.getElementById("output2").innerHTML = z;
+
+            //variables can be dealare with the keyword var
+            // it is used before 2015
+            // this line show an error as var x is already decalred let and has block scoped.
+            //var x = 'Tajinder'
+            var m ='Tajinder'
+            var y = 'kaur'
+            var z = m + y
+            document.getElementById('output3').innerHTML = z;
+
+            //variable declaration with let
+            //cannot redecalre the variable within the same scope with let
+            let a = 10;
+            let b = 20;
+            let c = a+b;
+            document.getElementById('output4').innerHTML = c;
+
+            // variable declaration with const
+            const pI = 3.14;
+            document.getElementById('output5').innerHTML = pI;
+
+            // When use declare a varible but not assign a value then default is undefined
+            let car;
+            document.getElementById("output6").innerHTML = car;
+        </script>
+    </body>
+</html>
