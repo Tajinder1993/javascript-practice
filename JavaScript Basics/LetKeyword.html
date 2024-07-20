@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,11 +9,43 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        
-        
-        <script async defer>
+        <!--Task 1
+        Variable declaration with the help of let keyword
+        -->
+        <p id="output1">Variable x is declare with the help of let keyword</p>
 
-            
+        <p id="output2">Redeclare the variable with the let keyword in the {} an note the difference</p>
+        
+        <!-- withinn in the function the redeclaration can be done-->
+        <p id="output3">Redeclare the variable within the function and call the dunction when the button is click</p>
+        
+        <button type="button" onclick="redeclare()">Click on me</button>
+        <script async defer>
+            // Here x=10
+            let x=10;
+            document.getElementById("output1").innerHTML = x;
+
+            // Redeclare the varible x in the same block with let keyword
+            // It gives an error as redeclaration cannot be performed in the same block
+            //let x = "tajinder";
+
+            // Redeclare the variable in the block
+            // that redeclaration exist with the block when browser engine exit the {} the value of x destroyed 
+            {
+                // Here x= tajinder
+                let x="tajinder";
+                document.getElementById("output2").innerHTML = x;
+            }
+
+            // Here value of x 10
+            document.getElementById("output2").innerHTML = x;
+
+            //Redeclare the variable within the function and call the function when the button is click
+            function redeclare(){
+                let x="tajinder";
+                document.getElementById("output3").innerHTML = x;
+            } 
+
         </script>
     </body>
 </html>

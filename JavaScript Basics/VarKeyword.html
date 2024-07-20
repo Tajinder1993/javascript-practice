@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Working with the Var Keyword</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--Task 1
+        variable are declare with the var keyword
+        -->  
+        <p id="output1">Variable is initilaized first then it is used</p>      
+        
+        <p id="output2">Vaiable is declared within the same scope with var keyword.</p>      
+
+        <p id="output3">Variable is redeclared with the let keyword.</p>      
+
+        <p id="output4"></p>      
+
+        <p id="output5"></p>      
+
+        <p id="output6"></p>      
+
+        <p id="output7"></p>      
+
+        <script async defer>
+            // variable can be used without declaration and can be declare later
+            // this technique is called hoisting
+            // But it is good to decalare all the variable at staring then use it
+            x="Tajinder Kaur";
+            var x;
+            document.getElementById("output1").innerHTML=x;
+
+            // redecalare the variable with the var
+            var x="Majinder Kaur";
+            document.getElementById("output2").innerHTML =x;
+
+            // Redeclare the let keyword display the elements of the html uncomment the code and see the effect
+            //let x=10;
+            document.getElementById('output3').innerHTML = x;
+
+            //var keyword has a global scope
+            var a =10;
+            document.getElementById("output4").innerHTML = "Varaible is initialized with the value a ="+a;
+
+            {
+                var a=100;
+                document.getElementById("output5").innerHTML = "The value of the variable within the block a = "+a;
+            }
+
+            document.getElementById("output6").innerHTML = "The value of the variable outside the block a = " +a;
+            
+            var a="Daljinder singh";
+            document.getElementById("output7").innerHTML = "The value of the varaible after the redeclaration a = "+a;
+
+        </script>
+    </body>
+</html></html>
