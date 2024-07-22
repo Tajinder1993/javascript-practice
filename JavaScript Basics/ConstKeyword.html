@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Working the const keyword</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--Task 1
+        const keyword is used to declare used to declare the variable whose value is constant.
+        const var cannot be redeclared and reinitialized
+        const keyword has block scope
+        -->
+        
+        <p id="output1"></p>
+
+        <p id="output2"></p>
+
+        <p id="output3"></p>
+
+        <p id="output4"></p>
+        <script async defer>
+
+            const pI = 3.14;
+            document.getElementById("output1").innerHTML = 'Value of constant P.I = '+pI;
+
+            //redeclare the constant
+            //Uncomment the code to see the error
+            //const pI=3.245;
+            //document.getElementById("output2").innerHTML="Value of constant P.I = "+pI;
+
+            //Array objects functions anf regular expressions are declare with the help of constant it is a good practice.
+            const array = [1,2,3,4,5,6];
+            document.getElementById("output3").innerHTML = "Elements of an array = "+array;
+
+            //whole cannot redeclare and reintilized but value of the array is changed with the help of its properties
+            array[0] = "Tajinder";
+            array[5] = 'Kaur'
+            document.getElementById("output4").innerHTML = "Elements of an array after changing the value with the help of array index = "+array;
+        </script>
+    </body>
+</html></html>
