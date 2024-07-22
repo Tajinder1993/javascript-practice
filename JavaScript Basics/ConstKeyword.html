@@ -22,6 +22,14 @@
         <p id="output3"></p>
 
         <p id="output4"></p>
+
+        <p id="output5"></p>
+
+        <p id="output6"></p>
+
+        <p id="output7"></p>
+
+
         <script async defer>
 
             const pI = 3.14;
@@ -40,6 +48,30 @@
             array[0] = "Tajinder";
             array[5] = 'Kaur'
             document.getElementById("output4").innerHTML = "Elements of an array after changing the value with the help of array index = "+array;
+        
+            // Add a new element into the array
+            array.push("Majinder Kaur");
+            document.getElementById("output5").innerHTML = "add an new element into an array with the push function = "+array;
+
+            // create an object with const keyword
+            // object cannot reassign 
+            // object cannot redeclared
+            // but properties of an object can be changed
+            const student = {
+                name : "Tajinder kaur",
+                class : "CSAT",
+                Id : "C0861062"
+            };
+            document.getElementById("output6").innerHTML = student.name + "  " + student.class
+            +"  "+ student.Id;
+
+            //Change the properties of an object
+            student.name ="Satwinder Singh";
+            student.Id = "C0859817";
+            document.getElementById("output7").innerHTML = "Name = "+ 
+            student.name + "<br> Class = "+
+            student.class + "<br> Id = "+
+            student.Id;
         </script>
     </body>
-</html></html>
+</html>
