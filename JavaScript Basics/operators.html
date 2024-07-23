@@ -33,6 +33,18 @@
         <p id="output11"></p>
         <p id="output12"></p>
         <p id="output13"></p>
+        <p id="output14"></p>
+        <p id="output15"></p>      
+        <p id="output16"></p>
+        <p id="output17"></p>
+        <p id="output18"></p>
+        <p id="output19"></p>
+        <p id="output20"></p>
+        <p id="output21"></p>
+        <p id="output22"></p>
+        <p id="output23"></p>
+        <p id="output24"></p>
+
 
         
         <script async defer>
@@ -129,11 +141,103 @@
                 document.getElementById("output10").innerHTML = "Equal(===) operator value of " +x+" and "+y+" is = "+z;
             }
 
+            //use of conditional operators
+            {
+                let x=11;
+                if(x<20)
+                {
+                    document.getElementById("output11").innerHTML = "Value of x is = "+x;
+                }
+                else
+                {
+                    document.getElementById("output11").innerHTML = "Value of x is missing try again";
+                }
+            }
+
+            //Logical operators
+            //Logical && (and) Operator
+            /*
+             T T = T
+             T F = F
+             F F = F
+             F T = F
+             If either condition is false the result is false otherwise true
+            */
+            {
+                let x=10;
+                let y=20; 
+                document.getElementById("output12").innerHTML = "Logical AND operator = " + ((x<10)&&(y>=20))
+            }
+
+            //Logical || (OR) Operator
+            /*
+             T T = T
+             T F = T
+             F F = F
+             F T = T
+             If both conditions are false then the result is false otherwise true
+            */
+            {
+                let x=10;
+                let y=20; 
+                document.getElementById("output13").innerHTML = "Logical OR operator = "+((x<10)||(y>=20))
+            }
+
+            //Logical ! (Not) Operator
+            /*
+             T = F
+             F = T
+             it revert the result
+            */
+            {
+                let x=10;
+                let y=20; 
+                document.getElementById("output14").innerHTML = "Result of Logical Not Operator "+!((x<10)||(y>=20))
+            }
+
+            // Ternary operator
+            {
+                let x =10;
+                document.getElementById("output15").innerHTML = "Ternary Operator : "+ ((x>10)? "value of x is less than 10" : "Value is X is not less than 10");
+            }
+
+            // Comparing the different types of data
+            /*
+            try these example on console to better understand
+
+            number < number                2<12  = true
+
+            numeric string treated as a number
+            number < "number string"       2>"12" = false
+
+            non numeric string convert to a NaN and it is always false
+            number < "string"              2>"tajinder" = false
+
+            When two numeric string are compared they are compared according their alphabetic order
+          
+            "2"<"12" =  it compares the first characters 2<1 = false
+            "2">"12" = it compares the first character 2>1 = true
+
+            A B C D 
+            E F G H 
+            I J K L
+            M N O P 
+            Q R S T
+            U V W X 
+            Y Z
+
+            "tajinder" < "manjinder" = t comes after the m it means t has larger value so
+            result is false
             
+            to handle the NaN number the value of variable should be converted into proper type
+            */
 
-
-
-
+            {
+                let age = "30";
+                if(Number(age)<70){
+                    document.getElementById("output16").innerHTML = "Eligible for the Admission";
+                }
+            }
         </script>
     </body>
 </html></html>
