@@ -6,7 +6,20 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <style>
+            label{
+                float: left;
+                width: 5rem;
+                margin: 10px;
+            }
+            input{
+                margin: 10px;
+            }
+
+            span{
+                color:red;
+            }
+        </style>
     </head>
     <body>
       
@@ -21,6 +34,8 @@
             <input type="password" id="password">
             <span id="error_message2"></span>
 
+            <br>
+
             <input type="submit">
         </form>
         
@@ -29,10 +44,25 @@
                 event.preventDefault();
 
                 var email = document.getElementById("email").value;
-                var password = document.getElementById("password").values;
+                var password = document.getElementById("password").value;
 
-                document.getElementById("error_message1").innerHTML = email;
-                document.getElementById("error_message2").innerHTML = password;
+            if(email == "")
+            {
+                document.getElementById("error_message1").innerHTML = "Email Address is required";
+            }
+            else
+            {
+                document.getElementById("error_message1").innerHTML = "";
+            }
+
+            if(password == "")
+            {
+                document.getElementById("error_message2").innerHTML = "Password is required"
+            }
+            else
+            {
+                document.getElementById("error_message2").innerHTML = ""
+            }
 
             }
         </script>
