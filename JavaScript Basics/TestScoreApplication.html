@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Test Score Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script async defer>
+            var score1 = prompt("Enter test score 1");
+            score1 = parseFloat(score1);
+
+            var score2 = prompt("Enter test score 2");
+            score2 = parseFloat(score2);
+
+            var score3 = prompt("Enter test score 3");
+            score3 = parseFloat(score3);
+
+            var total = score1+ score2 + score3;
+            total= parseFloat(total);
+
+            var average = total/3;
+            average= parseFloat(average);
+
+            alert("Total score is "+total);
+            alert("Avearge of "+total + "Score is "+average);
+        </script>
+    </head>
+    <body>
+        <h1>Test Score Application</h1>
+            <script>
+            document.write("Score in test 1 is : " + score1+"<br>");
+            document.write("Score in test 2 is : "+score2+"<br>");
+            document.write("Score in test 3 is : "+ score3+"<br><br>");
+            document.write("Total is : "+total+"<br>");
+            document.write("Average score is : "+average+"<br>");  
+            </script>
+            <p>Thanks for using the Test Score Application.</p>
+    </body>
+</html>
