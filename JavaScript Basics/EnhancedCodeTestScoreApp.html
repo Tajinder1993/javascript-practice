@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Enhanced code for test score application.</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script async defer>
+            var entry;
+            var total =0;
+            var counter =0;
+        do{
+                var entry = prompt("Enter the Scores and 999 to exit from the application");
+                entry = parseFloat(entry);
+
+                if(!isNaN(entry)&&((entry>0)&&(entry<=100))){
+                    total = total+entry;
+                    counter= counter +1;
+                }
+                else if(entry!=999){
+                    entry = prompt("Enter Score 1-100 and 999 to exit.")
+                    entry = parseFloat(entry);
+                }
+            }while(entry!= 999);
+
+        alert("good bye have a good day");
+        alert("Total of score entered by the user = "+total);
+        
+        if(counter >0){
+            var average = total/counter;
+            average =parseFloat(average);
+            alert("Average score are = "+average);
+        }
+        else{
+            alert("Sorry !!!!Try Again");
+        }
+
+        </script>
+    </body>
+</html>
