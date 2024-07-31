@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Future Value Calculation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        <script async defer>
+            let investment = prompt("Enter the Investement amount ");
+            investment = parseFloat(investment);
+
+            let rate = prompt("Enter the rate of interest for the invested amount")
+            rate = parseFloat(rate);
+
+            let years = prompt("Enter the number of years for invested amount")
+            
+            for( let i =0; i<years; i++){
+
+                investment = investment + (investment* rate/100);
+            }
+            alert("Future value is : "+investment)
+        </script>
+    </body>
+</html></html>
