@@ -1,0 +1,40 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Enhanced MPG Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script async defer>
+
+        var entries ="";
+        do{
+            var miles = prompt("Enter the miles drives ");
+            var gallons = prompt("Enter the how many gallons gas is used ");
+
+            miles = parseFloat(miles);
+            gallons = parseFloat(gallons);
+
+           
+            if(
+                ((miles>0) && !isNaN(miles)) && ((gallons>0)&& !isNaN(gallons))
+            ){
+                var MPG = miles/gallons;
+                MPG = parseFloat(MPG);
+            }
+            else
+            {
+                alert("Both entries are invalid");
+            }
+            alert("Miles Per Gallon is : "+MPG);
+            entries = prompt("Enter Y to continue with new entries.")
+           }while(entries.toLowerCase() == "y")
+           
+        </script>
+    </body>
+</html>
