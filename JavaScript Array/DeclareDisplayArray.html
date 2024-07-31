@@ -1,0 +1,59 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Working with array</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script async defer>
+            var names = ["Tajinder", "Manjinder", "Daljinder"];
+            document.write("Display the elements of an array <br>");
+            document.write(names);
+
+            names[names.length] ="chipmunks";
+            document.write("<br><br>Insert the Element at the end of an array.<br>")
+            document.write(names);
+
+            var size = prompt("Enter the size of an array");
+            size = parseFloat(size);
+            
+            var numbers = []; 
+
+            for(i=0;i<size;i++){
+                numbers[i] = prompt("Enter the elements of an array : "+i);
+            }
+
+            for(i=0; i<numbers.length; i++){
+                document.write("<br><br> Numbers["+i+"] = " + numbers[i])
+            }
+
+            var sum =0;
+            var size = prompt("Enter the size of an array");
+            size = parseFloat(size);
+
+            var array = [];
+
+            for(i =0; i<size; i++){
+                array[i] = prompt("Enter element of an array "+i);
+            }
+
+            for(i=0;i<array.length; i++){
+                document.write("<br>Array["+i+"] = "+array[i]);
+            }
+
+            document.write("<br>Additon of an above array.")
+
+            for(i=0; i<array.length; i++){
+                sum = sum + parseFloat(array[i]);
+            }
+
+            document.write(sum);
+
+        </script>
+    </body>
+</html>
