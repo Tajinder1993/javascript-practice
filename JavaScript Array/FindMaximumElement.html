@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <script async defer>
+           var array =[];
+           var size =0;
+           var max =0;
+           var sum =0;
+
+           //input an array element
+           size = prompt("Enter the size of an array");
+           size =parseInt(size);
+
+           for(i=0; i<size; i++){
+             array[i] = prompt("Enter the elements of an array :" +i);
+             array[i] = parseInt(array[i]);
+             document.write("<br>Element of an array["+i+"] = "+array[i])
+           }
+
+           //Sum of an array element
+           for(i=0;i<array.length;i++){
+            sum = sum +parseInt(array[i]);
+            }
+            document.write("<br>Sum of array element is = "+sum);
+            document.write("<br>Average of an array elemnent is = "+ sum/array.length)
+
+
+           //find the highest element from an array
+           for(i=0;i<array.length;i++){
+            if(array[i]>max){
+                max = array[i];
+            }
+            else{
+                max =max;
+            }
+           }
+
+           document.write(" <br> Maximum element is = "+max);
+
+        </script>
+    </body>
+</html></html>
