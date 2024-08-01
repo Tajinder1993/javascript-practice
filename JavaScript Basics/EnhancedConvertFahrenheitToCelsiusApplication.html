@@ -1,0 +1,36 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Enhanced the fahrenheit to celsius application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    
+        <script async defer>
+        var status;
+        do{
+            var fahrenheit = prompt("Enter the temperature in the fahrenheit.");
+            fahrenheit = parseFloat(fahrenheit);
+
+           if(fahrenheit >-100 && fahrenheit<212){
+             var celsius = (fahrenheit -32) *5/9;
+             alert("Temperature in fahrenheit is = "+fahrenheit+
+               "\n Temperature in celsius is = "+celsius 
+             )
+             document.write("<br>Temperature in fahrenheit is = "+fahrenheit);
+             document.write("<br>Temperature in celsius is = "+celsius);
+             status = prompt("Enter Y to continue with another application ");
+           }
+           else{
+            alert("\n You entered : "+fahrenheit+" \n Entry must range from -100 to +212");
+            status = prompt("Enter Y to enter the temperature again and must range from -100 to +212 ");
+           }
+        } while(status.toLowerCase()=="y");
+           
+        </script>
+    </body>
+</html></html>
