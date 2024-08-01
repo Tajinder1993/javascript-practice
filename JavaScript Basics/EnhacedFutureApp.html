@@ -1,0 +1,39 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Enhaced Future Value calculation Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      
+        
+        <script async defer>
+
+            do{
+                var investement = prompt("Enter the invested amount ");
+                var rate = prompt("Enter the rate of interest ");
+                var years = prompt("Enter The number of years ");
+                var status = "y";
+
+                investement = parseFloat(investement);
+                rate = parseFloat(rate);
+                years = parseInt(years);
+
+                document.write("<br> Invested amount = "+investement+" years = "+years+" and rate = "+rate+"<br>")
+                for(i=0; i<years; i++)
+                {
+                var interest = investement * rate/100;
+                var futureValue = investement + interest;
+                document.write("<br> Year = "+i+" Interest = "+interest+" and the value is = "+ parseInt(futureValue));
+                investement = futureValue;
+                }
+
+                status = prompt("Enter Y to continue any number to exit");
+            }while(status.toLowerCase()=="y");
+        </script>
+    </body>
+</html></html>
