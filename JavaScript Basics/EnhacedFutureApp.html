@@ -10,32 +10,41 @@
     </head>
     <body>
       
-        
+
         <script async defer>
+            var investement = prompt("Enter the invested amount ");
+            investement = parseFloat(investement)
 
-            do{
-                var investement = prompt("Enter the invested amount ");
-                var rate = prompt("Enter the rate of interest ");
-                var years = prompt("Enter The number of years ");
-                var status = "y";
+            var rate = prompt("Enter the rate of interest ")
+            rate = parseFloat(rate);
 
-                investement = parseFloat(investement);
-                rate = parseFloat(rate);
-                years = parseInt(years);
+            var years = prompt("Enter the number of years ");
+            years = parseInt(years);
 
-                document.write("<br> Invested amount = "+investement+" years = "+years+" and rate = "+rate+"<br>")
-                for(i=0; i<years; i++)
-                {
-                var interest = investement * rate/100;
-                var futureValue = investement + interest;
-                document.write("<br> Year = "+i+" Interest = "+interest+" and the value is = "+ parseInt(futureValue));
-                investement = futureValue;
-                }
+            var futureValue =0;
+            var Interest =0;
 
-                status = prompt("Enter Y to continue any number to exit");
-            }while(status.toLowerCase()=="y");
+            document.write("Caclulate the yearly compound interest<br>")
 
-            <p>Thanks for using future value application </p>
+            var yearlyInvestment = investement;
+            for(i=1;i<=years; i++){
+                Interest = yearlyInvestment * rate/100;
+                futureValue = yearlyInvestment+ Interest;
+                yearlyInvestment =futureValue;
+            }
+            document.write(" <br> Investement = "+investement+ " Rate of interest = "+rate+" number of years = "+years+" and the total amount is = "+futureValue.toFixed(2));
+            
+            document.write("<br><br>Calculate the monthly compound interest<br>")
+            
+            var monthlyInvestment = investement;
+            var months = years *12;
+            for(i=1;i<=months;i++){
+                 Interest = monthlyInvestment * (rate/100)/12;
+                 futureValue = monthlyInvestment+Interest;
+                 monthlyInvestment = futureValue;
+            }
+            document.write(" <br> Investement = "+investement+ " Rate of interest = "+rate+" number of years = "+years+" and the total amount is = "+futureValue.toFixed(2));
+            
         </script>
     </body>
 </html></html>
