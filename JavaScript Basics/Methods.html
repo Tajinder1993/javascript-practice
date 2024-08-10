@@ -16,8 +16,56 @@
             <input type="text" id="email" name="email">
             <input type="button" value="Join our list">
         </form>
-        
+
+        <form onsubmit="myFunction(event)">
+             <label for="inputbox">Enter any value</label>
+             <input type="text" id="inputbox">
+             <input type="submit">
+        </form>
+        <p id="int1"></p>
+        <p id= "float1"></p>
         <script async defer>
+             document.write("<br> Use of the confirm() function : to display the dialog box as alert()")
+             //confirm("Hello i am confirm dialog box")
+
+             document.write("<br> Two methods that are used to working with the number objects.")
+             document.write("<br> These two methods belong to the windows object.")
+             
+             function myFunction(event){
+               event.preventDefault();
+               var intVar = document.getElementById("inputbox").value;
+               intVar = parseInt(intVar);
+               var floatVar = document.getElementById("inputbox").value;
+               floatVar = parseFloat(floatVar);
+
+               document.getElementById("int1").innerHTML = intVar;
+               document.getElementById("float1").innerHTML = floatVar;
+
+               document.getElementById("inputbox").value = "";
+               document.getElementById("inputbox").focus();
+             }
+
+             document.write("<br><br>create a object");
+             var dateVar = new Date();
+
+             document.write("<br> Today Date is : "+dateVar.toDateString());
+             document.write("<br> Display the year is : "+dateVar.getFullYear());
+             document.write("<br> Today day is : "+dateVar.getDay());
+             document.write("<br> Month is : "+dateVar.getMonth())
+
+             document.write("<br><br> Working with the string Object");
+              var name = "Tajinder Kaur is the best";
+              document.write("<br> The name is : " + name);
+              //nameLength = name.length;
+              document.write("<br> Length of the string is : "+ name.length)
+              document.write("<br> Upper case  : "+name.toUpperCase());
+              document.write("<br> Lower case : "+ name.toLowerCase());
+              //document.write("<br> Index function : "+ name.indexOf('k',8));
+              document.write("<br> substring is : "+ name.sustr(4,9));
+
+
+
+            
 
         </script>
     </body>
