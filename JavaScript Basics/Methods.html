@@ -60,8 +60,66 @@
               document.write("<br> Length of the string is : "+ name.length)
               document.write("<br> Upper case  : "+name.toUpperCase());
               document.write("<br> Lower case : "+ name.toLowerCase());
-              //document.write("<br> Index function : "+ name.indexOf('k',8));
-              document.write("<br> substring is : "+ name.sustr(4,9));
+              let text = "what a wonderful day";
+              let char = text.charAt(9);
+
+              document.write("<br> <br> The string is = "+text);
+              // if the charAt() function not find the character then it does not show anything on the display.
+              // not accept the empty string.
+              document.write("<br> charAt() : retun the character at particular location. " + char);
+
+              // this function return the result in UTF format and not support the negative index
+              // if no character found then the result is NaN
+              document.write("<br> charCodeAt() : It return the UTF code of the char. The code of  "+ text.charAt(8) +" is  "+text.charCodeAt(8))
+
+              // this comes in use in 2022 and it accepts the empty string.
+              // it return the undefined as a result if not charcater is found at defined index position.
+              document.write("<br> at() : it also return the char at particular location. but it accept the negative index as well. "+text.at(56))
+
+              // it accept the negative value then start looking from end 
+              // if end number is not specified whole string is extracted.
+              // by default the browser start indexing of the string from 0 and this is the reason the end position is exclusive.
+              document.write("<br> slice() : to extract the string."+ text.slice(-5, -2))
+
+              // it does not accept the negative start and end number as any number less then 0 are treated as 0.
+              document.write("<br> subString() : used to extract the string. "+ text.substring(5,10))
+
+              // accept the negative index
+              // 2nd number specify the length of the string to be extracted
+              document.write("<br> substr() : extract the string."+ text.substr(7,10));
+
+              document.write("<br> concat() : combine the strings "+ text.concat(" " ,name));
+
+              let text1 = "    I am best     ";
+              document.write("<br><br> The new string is : "+text1 + " the length of the string is = "+ text1.length);
+
+              // i add a spaces around the string just to look the effect of the trim function.
+              document.write("<br> trim() - remove white spaces from both ends. "+text1.trim() + " and now the length is = "+ text1.trim().length)
+
+              document.write("<br> trimStart() - remove the spaces form the starting. "+ text1.trimStart()+ " and now the length is = "+ text1.trimStart().length);
+              document.write("<br> trimEnd() - remove the spaces form the end of the string. "+ text1.trimEnd()+ " and now the length is = "+ text1.trimEnd().length);
+
+              let text2 = "Tajinder";
+
+              document.write("<br> padStart() - used to do padding from the left."+text2.padStart(15,'*'))
+              document.write("<br> padEnd() - used to do padding from the right of the string."+text2.padEnd(15,'*'))
+
+              // convert a number to a string
+              let a =10;
+              //let str = a.padStart(10,"#"); // it generate s an error as a is number
+              let str = a.toString().padStart(10,"#");
+              document.write("<br>"+str);
+
+              document.write("<br> repeat() - it repeats the string. "+ text2.repeat(5));
+
+
+
+
+
+
+
+                         
+              
 
 
 
