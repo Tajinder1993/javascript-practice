@@ -110,21 +110,27 @@
               let str = a.toString().padStart(10,"#");
               document.write("<br>"+str);
 
-              document.write("<br> repeat() - it repeats the string. "+ text2.repeat(5));
-
-
-
-
-
-
-
-                         
+              document.write("<br> repeat() - it repeats the string. "+ text2.repeat(5));           
               
+              let text3 = "what a wonderful day and day starts a beautiful month";
+              
+              // this funtion replace a first occurance of a string.
+              // this function is a case sensitive
+              document.write("<br> replace() - to replace the old value with new value. "+ text3.replace("day", "month"));
 
+              // global flag /g is used to replace all the occurance of a string
+              document.write("<br> replace() function with a /g flag. " + text3.replace(/day/g,"days"));
 
+              // flag /i is used to make the string case insensitive 
+              document.write("<br> replace funtion with /i flag. "+text3.replace(/MONTH/i,"Month")+"<br><br>");
 
-            
-
+              // Convert the string into an array
+              let arr = text3.split(" ");
+              let resArr ="";
+              for(i=0; i<arr.length;i++){
+                resArr = resArr + arr[i]+"<br>";
+              }
+              document.write(resArr);
         </script>
     </body>
 </html>
