@@ -131,6 +131,57 @@
                 resArr = resArr + arr[i]+"<br>";
               }
               document.write(resArr);
+
+              //covert the string into an array
+              let text4 = "My name is tajinder kaur again i write tajinder kaur";
+              let arr1 = text4.split("");
+              let res1 ="";
+              for(i=0;i<arr1.length; i++)
+              {
+                res1 = res1+arr1[i]+"<br>";
+              }
+              document.write(res1);
+
+              //String searching methods 
+
+              // IndexOf() method return the index of first occrence of the string.
+              // it accepts two parameters first parameter indicates the string and second specify the position of the string to be searched.
+              document.write("<br>")
+              // it return -1 as this method is case sensitive
+              document.write("<br> indexOf() returns the index of the string. "+text4.indexOf('Tajinder'));
+              document.write("<br> indexOf() returns the index of the string. "+text4.indexOf('tajinder'));
+              // second parameter specify the seraching position
+              document.write("<br> indexOf() returns the index of the string. "+text4.indexOf('is',3));
+
+              // lastIndexOf() method same as the above but it searches from the end of the string
+              document.write("<br> lastIndexOf() returns the index of the string. "+text4.lastIndexOf('name',4));
+
+              // search() method takes only 1 parameter and regular expressions are acceptable 
+              document.write("<br> search() returns the index of the string. "+ text4.search(/Tajinder/i));
+
+              //match() it match the string and return the string if match found otherwise null result
+              document.write("<br> match() it match the string against a string. "+ text4.match("Tajinder"))
+              document.write("<br> match() it match the string against a string. "+ text4.match("tajinder"))
+              document.write("<br> match() it match the string against a string. "+ text4.match(/Tajinder/gi))
+
+              //matchAll() method act as a iterator and match the string against a string
+
+              //document.write("<br> matchAll() "+ text4.matchAll("tajinder"))
+
+              let iterator = text4.matchAll("tajinder");
+              document.write("<br> matchAll() "+Array.from(iterator))
+
+              // includes() it checks string contain the specified value
+              document.write("<br> includes() "+ text4.includes("tajinder"))
+              document.write("<br> includes() "+ text4.includes("Tajinder"))
+              
+              //startsWith() check that string start with the input string 
+              document.write("<br> startsWith() "+ text4.startsWith("tajinder", 7))
+
+              // endsWith() check string end with the input string, it accept the second parameter for search position
+              document.write("<br> endsWith() "+ text4.endsWith("kaur"))
+
+
         </script>
     </body>
 </html>
