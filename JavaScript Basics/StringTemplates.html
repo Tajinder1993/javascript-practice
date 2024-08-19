@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>String Templates</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        
+        <script async defer>
+            // it is always written in back-ticks
+            let str = `Tajinder Kaur`;
+            document.write("<br> String template : "+str);
+
+            // single quotes and double quotes are used
+            let str1 = `"Tajinder" 'kaur'`;
+            document.write("<br> String Template with single quotes and double quotes. "+ str1)
+
+            // string can be wrttten in multiple lines
+            let str2 = `hi
+            my name is 
+            Tajinder 
+            kaur`;
+            document.write("<br> string template declared in multiple lines. "+ str2);
+
+            // interpolation
+            // subsitute the varaiable name with the values
+            let firstName ="Tajinder";
+            let lastName = "Kaur";
+            document.write(`<br> String interpolation My name is ${firstName} ${lastName}.` );
+
+            // expression are also interpolated
+            let a =100;
+            let b =1234;
+            document.write(`<br>The addition of ${a} and ${b} is = ${a+b}`);
+
+            // interpolate the html 
+            let header = "Grocery List";
+            let list = ["apple", "mango", "pineapple", "sweet potato"];
+
+            let html = `<h2> ${header}</h2>`;
+
+            for(const l of list){
+                html += `<li>${l}</li>`
+            }
+
+            html += `</ul>`
+            document.write(html);
+        </script>
+    </body>
+</html>
