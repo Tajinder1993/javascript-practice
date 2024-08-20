@@ -1,0 +1,80 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>working with Numbers</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h1> Working with Java Script Numbers</h1>
+        <script async defer>
+            // declare the java script numbers
+            let a =10;
+            let b=10.4567;
+            document.write(`The number is a = ${a} is a integer number and b = ${b} is a decimal number. <br>`)
+
+            // extra large and small  numbers are declare with exponent notation
+            //positve power indicates the larger number and negative power for smaller number
+            let expP = 12.78e5;
+            let expN = 23.56e-6;
+            document.write(`<br> Exponent number has positive power is ${expP} and with negative power is ${expN}`)
+
+            // integer number are accurate are up to 15 decimal numbers.
+            let inte = 999999999999999;
+            let inter =9999999999999999;
+            document.write(`<br>Integer number accurate up to 15 digits ${inte} and after 15 digits the number become ${inter}`)
+
+            // float precision numbers are not always accurate
+            document.write("floating point precison are not always accurate")
+            document.write(` <br>floating point addition of 0.1 and 0.2 = ${0.1+0.2}`);
+            document.write(` <br>floating point addition of 1.01 and 1.02 = ${1.01+1.02}`);
+            document.write(` <br>floating point addition of 1.45 and 2.45 = ${1.45+2.45}`);
+
+            document.write(`<br>The above problem can be solved if each number is multiply by 10 and the result is divided by the 10.`)
+            document.write(` <br>floating point addition of 0.1 and 0.2 = ${(0.1*10+0.2*10)/10}`);
+            document.write(` <br>floating point addition of 1.01 and 1.02 = ${(1.01*10+1.02*10)/10}`);
+            document.write(` <br>floating point addition of 1.45 and 2.45 = ${(1.45*10+2.45*10)/10}`);
+
+
+            // working with numbers and strings
+            document.write(`<br>The two vales are 10 and 20`)
+            document.write(`<br>The two number addition is ${10+20}`)
+            document.write(`<br>The addition of two string numbers is ${"10"+"20"}`)
+            document.write(`<br>The  addition of one number and a string number is ${10+"20"}`)
+
+            // the + operator acts as a concatenation operator for string but for other operators perform the numeric operations on the string numbers.
+            document.write(`<br> Divison of two string numbers is  ${"10"/"5"}`)
+            document.write(`<br> Multiplication of two string numbers is  ${"10"*"5"}`)
+            document.write(`<br> Subraction of two string numbers is  ${"10"-5}`)
+            document.write(`<br> Divison of one string numbers with a string is  ${("10"/"Apple")}`)
+            document.write(`<br> Check Not a number:  ${isNaN("10"/"Apple")}`)
+            document.write(`<br> Type of NaN :  ${typeof NaN}`)
+
+            //Hexadecimal number base is 16 and start with OX
+            //Octal number base is 7 and start with o
+            //Decimal number base is 10 
+            //Binary number base is 2
+            let number = 105;
+            document.write(`<br> Hexadecimal number of ${number} is = ${number.toString(16)}`)
+            document.write(`<br> Octal number of ${number} is = ${number.toString(8)}`)
+            document.write(`<br> decimal number of ${number} is = ${number.toString(10)}`)
+            document.write(`<br> Binary number of ${number} is = ${number.toString(2)}`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html></html>
