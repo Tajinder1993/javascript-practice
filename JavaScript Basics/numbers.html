@@ -63,6 +63,23 @@
             document.write(`<br> decimal number of ${number} is = ${number.toString(10)}`)
             document.write(`<br> Binary number of ${number} is = ${number.toString(2)}`)
 
+            // Working with the javaScript number objects
+            let x = new Number(123);
+            let z = new Number(123)
+            document.write(`<br> Type of the number ${x} is ${typeof x}`);
+
+            //comparison of the number with a number object
+            // compare the number objects always false as objects cannot be compared
+            let y =123; // number
+
+            document.write(`<br>The comparison of number y = ${y} with number object x = ${x} is = ${x==y} `)
+            document.write(`<br>The comparison of number y = ${y} with number object x = ${x} is = ${x===y} `)           
+            document.write(`<br>The comparison of number object z = ${z} with number object x = ${x} is = ${x==z} `)
+            document.write(`<br>The comparison of number object z = ${z} with number object x = ${x} is = ${x===z} `)
+
+
+
+
 
 
 
