@@ -77,6 +77,40 @@
             document.write(`<br>The comparison of number object z = ${z} with number object x = ${x} is = ${x==z} `)
             document.write(`<br>The comparison of number object z = ${z} with number object x = ${x} is = ${x===z} `)
 
+            // Working with the bigInt numbers
+            //integer number are accurate up to 15 numbers so if the numbers are too big then use bigInt
+            // append n at the end of number to make it bigInt
+             let int1 = 9999999999999999;
+             let bigint = 99999999999999999n;
+             document.write(` <br> integer number is = ${int1} and same number in big int is = ${bigint}`)
+
+             //another mehod to declare a big int number is
+             let bigint1 = BigInt(235656454645464564646654456);
+             document.write(`<br>Big int number is = ${bigint1}`)
+             document.write(` Type of bigInt number is = ${typeof bigint1}`)
+
+             // Addition of two big int numbers
+             // do not mix the big int number with the number for arithmatic operations as it result lost of information
+             document.write(`<br> Addition of ${bigint} and ${bigint1} is = ${bigint+bigint1}`)
+
+             //big int numbers has no decimal so it need explicit type conversion
+             document.write(`<br> The division of ${bigint} and 2 is = ${Number(bigint)/2}`)
+
+             // Work with minimum and maximum safe integers
+             // these are two properties of the numbers
+              let m = Number.MAX_SAFE_INTEGER;
+              let n = Number.MIN_SAFE_INTEGER;
+              
+              document.write(`<br> The maximum safe integer number is = ${m}`);
+              document.write(`<br> The minimun safe integer number is = ${n}`);
+
+              // Number object has two methods to check the number type
+              // isInteger() and isSafeInteger()
+              // integer number are safe within 15 digits
+              document.write(` <br> isInteger() = ${Number.isInteger(1234)}`)
+              document.write(`<br> isSafeInteger() = ${Number.isSafeInteger(bigint)}`)
+
+
 
 
 
