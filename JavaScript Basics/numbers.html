@@ -110,6 +110,56 @@
               document.write(` <br> isInteger() = ${Number.isInteger(1234)}`)
               document.write(`<br> isSafeInteger() = ${Number.isSafeInteger(bigint)}`)
 
+              // number methods
+
+              //toString() :- it is used to convert a number into a string.
+              let str = 1007897;
+              document.write(`<br> check the type of string. the value in the string is =  ${str} and the type = ${typeof str}`)
+              let strType = str.toString();
+              document.write(` <br>Convert the above string into number using the toString(). Type = ${typeof strType} and the value is = ${strType} `)
+
+              //toExponential() function is used to convert a number into the exponential notation.
+              document.write(`<br> toExpoenentail() convert a number into exponent notation. ${str.toExponential()}`)
+
+              //toFixed method is used to set the precision of the number
+              document.write(`<br> toFixed() set the number after the decimal point. ${(456.9890809).toFixed(4)}`)
+
+              //toPrecision() return the number specify by the user in the function
+              document.write(`<br> toPrecision() return the number of string. ${(68778.8979879).toPrecision(6)}`)
+
+              //valueOf() convert the number object into primitive value
+              document.write(`<br> valueOf() convert the number object into the number. ${(438483).valueOf()}`)
+
+              //coverting a string to a a numbers
+
+              // All these methods are javasscript global objects not the number() methods
+              // Number() method is used to convert a string to a number.
+              // it does not treat space as a string otherwise if there is a string then the result will be NaN
+              document.write(`<br> Number()  "10" = ${Number("10")}`)
+              document.write(`<br> Number()  "10.232" = ${Number("10.232")}`)
+              document.write(`<br> Number()  "  10" = ${Number("  10")}`)
+              document.write(`<br> Number()  "10 years" = ${Number("10 year")}`)
+              document.write(`<br> Number()  "year 10" = ${Number("year 10")}`)
+              document.write(`<br> Number()  "10-08-2024" = ${Number("10-08-2024")}`)
+              document.write(`<br> Number()   "2024-03-03 Date object " = ${Number(new Date("2024-03-03"))}`)
+
+              // toParseInt() : this function is used to convert a number into an integer
+              document.write(`<br> parseint()  "10" = ${parseInt("10")}`)
+              document.write(`<br> parseInt()  "10.232" = ${parseInt("10.232")}`)
+              document.write(`<br> parseInt()  "  10" = ${parseInt("  10")}`)
+              document.write(`<br> parseInt()  "10 years" = ${parseInt("10 year")}`)
+              document.write(`<br> parseInt()  "year 10" = ${parseInt("year 10")}`)
+              document.write(`<br> parseInt()  "10-08-2024" = ${parseInt("10-08-2024")}`)
+              document.write(`<br> parseInt()   "2024-03-03 Date object " = ${parseInt(new Date("2024-03-03"))}`)
+
+
+
+
+
+
+
+
+
 
 
 
