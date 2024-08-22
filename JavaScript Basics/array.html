@@ -1,0 +1,39 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Array</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+        <script async defer>
+            // create an array
+            const names =["tajinder","manjinder","daljinder"];
+            document.write(`<br> Array of name is = ${names}`)
+
+            // array elements can be declare in many lines
+            const cars = ["toyato",
+            "BMW",
+             "audi", 
+             "range rover"]
+            document.write(`<br> Array declaration can be span in multiple lines. = ${cars}`)
+
+            //user can create an empty array and assign values later to an array
+            const teacherName =[]
+            teacherName[0]="Tajinder Kaur"
+            teacherName[1]="Manjinder Kaur"
+            teacherName[2] = "Daljinder Singh"
+            document.write(`<br> Declare and empty array and populate the elements. = ${teacherName}`)
+
+            // declare an array with the new keyword
+            const studentName = new Array("Satwinder Singh", "Tajinder Kaur", "Ruhi", "Atam");
+            document.write(`<br> Array is declared with new keyword. = ${studentName}`);
+
+
+        </script>
+    </body>
+</html>
