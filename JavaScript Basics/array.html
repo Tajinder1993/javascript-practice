@@ -100,6 +100,26 @@
             for(i=0; i<teacherName.length; i++){
                 document.write(`<br> TeacherName[${i}] = ${teacherName[i]}`)
             }
+
+            //there are two ways to create an empty array.
+            const points = new Array();
+            document.write(`<br> empty array with new() method. ${points}`)
+            const arr1 = []; // this is another method to create an empty array.
+            document.write(`<br> Empty array create with []. ${arr1}`)
+
+            // when user create an array with one element using the new method it create many empty holes
+            // but [] create an array with one element.
+            const arr2 = new Array(50);
+            document.write(`<br> Array with new() does not work well when array has only 1 element. ${arr2}`)
+            const arr3 = [];
+            arr3[0] = 40;
+            document.write(`<br> Array [] solve the new() issue. ${arr3}`)
+
+            // normally when type of array is checked then it return the object type.
+            // there are two ways to identify the arrat identity.
+            // isArray(), intsanceof
+            document.write(`<br> Check the type of an array. ${Array.isArray(teacherName)}`)
+            document.write(`<br> check the type of an array with instanceof method. ${teacherName instanceof Array}`)
         
 
 
