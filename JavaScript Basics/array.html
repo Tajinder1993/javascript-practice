@@ -33,6 +33,79 @@
             const studentName = new Array("Satwinder Singh", "Tajinder Kaur", "Ruhi", "Atam");
             document.write(`<br> Array is declared with new keyword. = ${studentName}`);
 
+            // Array elements can be accessed using the index number
+            document.write(`<br> Access the second teacher from the teacher names array. ${teacherName[1]} `)
+
+            //change an array element
+            teacherName[2] = "Manpreet kaur";
+            document.write(`<br> The name of last teacher is changed. ${teacherName}`)
+
+            //convert an array into a string
+            let strarray = teacherName.toString();
+            document.write(` <br>Check the type of an before converting into an string. ${typeof teacherName}`)
+            document.write(` <br>Array is changed into an string. ${strarray}`)
+            document.write(` <br>Check the type of an array after converting into an string. ${typeof strarray}`)
+
+            //access the full array
+            document.write(`<br> Access full array. Teacher names array. ${teacherName}`)
+
+            //array can be an object
+            let arrayObj = [];
+            var date = new Date();
+            arrayObj[0] = date.toDateString() // first element of an array is an date object.
+            arrayObj[1] = teacherName; // second element of an array holds the another array
+            document.write(`<br> Array objects = ${arrayObj}`);
+
+            // array property to find the number of elements in an array
+            document.write(`<br> Find the length of an teacher name array. ${teacherName.length}`)
+
+            //array has method sort to sort the elements of an array
+            document.write(`<br> The teacher name array before sorting. ${teacherName}`);
+            document.write(`<br> The teacher name array after sorting. ${teacherName.sort()}`)
+
+            //access the first element of an array
+            document.write(`<br> Acces first element of an array. ${teacherName[0]}` )
+
+            //access the last element of an array if the elements of an array are not known to the user.
+            document.write(`<br> Access the last element of an array with the help of an lenght property. ${teacherName[teacherName.length - 1]}`)
+
+            // looping an arary element 
+            for(i=0; i<teacherName.length; i++){
+                document.write(`<br> TeacherName[${i}] = ${teacherName[i]}`)
+            }
+
+            //display the looping element in an html format
+
+            let text = `<ul>`
+            for(i=0; i<teacherName.length; i++){
+                text += `<li>TeacherName[${i}] = ${teacherName[i]} </li>`
+            }
+            text += `</ul>`;
+            document.write(`<br> ${text}`)
+            
+            //forEach loop to access an arary element 
+            teacherName.forEach(displayArray);
+
+            function displayArray(value){
+                document.write(`<li>${value}</li>`)
+            }
+
+            //add an array element into the teacher name array
+            teacherName.push("Dalinder Singh");
+            document.write(`<br> Teacher names after adding an new name. ${teacherName}`)
+
+            //it is not good idea to add new array element with an index as it creats an empty holes
+            teacherName[9] = "Satwinder Singh";
+            document.write(`<br>Array with the empty holes marks as undefined.`)
+            for(i=0; i<teacherName.length; i++){
+                document.write(`<br> TeacherName[${i}] = ${teacherName[i]}`)
+            }
+        
+
+
+
+
+
 
         </script>
     </body>
