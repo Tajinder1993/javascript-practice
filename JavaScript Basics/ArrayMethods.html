@@ -1,0 +1,33 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Array Methods</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+  
+        
+        <script async defer>
+
+            // Length is the property of an array used to find the length of an array
+            const arr = [56,89,90,34,67]
+            document.write(`<br> Lenght of an array : ${arr.length}`);
+
+            //toString method is used to convert an array into the string.
+            document.write(`<br> Convert an array to a string. ${arr.toString()}`)
+            document.write(`<br> Check the type of an array after the conversion into string. ${typeof arr.toString()}`)
+
+            // at() function is ussed to access an array element like the []
+            // it support the negative indexing as well 
+            document.write(`<br> access the first element of an array using the at(). ${arr.at(5)} `)
+
+            // join() method is same as the string method but we define the symbol to separate the array elements 
+            document.write(`<br> join() join the array element with a specified separator. ${arr.join(" * ")}`)
+            document.write(`<br> type of the array after the join(). ${ typeof arr.join(" * ")}`)
+        </script>
+    </body>
+</html></html>
