@@ -28,6 +28,36 @@
             // join() method is same as the string method but we define the symbol to separate the array elements 
             document.write(`<br> join() join the array element with a specified separator. ${arr.join(" * ")}`)
             document.write(`<br> type of the array after the join(). ${ typeof arr.join(" * ")}`)
+
+            // pop() method remove the array element from the end.
+            document.write(`<br> pop() removes the last element of an array.  ${arr.pop()}`)
+            document.write(`<br>  Elemnents of an after pop() ${arr}`)
+
+            // push() it is used to insert an elements at the end of an array.
+            document.write(`<br> push() insert an element at the end of an array. ${arr.push(100)}`)
+            document.write(`<br> Array elements after inserting the elemnet. ${arr}`)
+
+            // shift() it is used to remove an array element from the beginning of an array
+            document.write(`<br> shift() it remove an element from the start ${arr.shift()}`)
+            document.write(`<br> Array elements after the shifting. ${arr}`)
+
+            // uhshift method is used to insert the element at the starting.
+            // it return the lenght of the new array as well.
+            document.write(`<br> unshift() used t0 insert the element at the beginning. ${arr.unshift(678)}`)
+            document.write(`<br> Array elements after the unshifting. ${arr}`)
+
+            //delete() method the element from an array at particular position but create a holes.
+            delete arr[2];
+            document.write(`<br> Array elements after the deleting the 3 element. ${arr}`)
+
+            
+
+
+
+
+
+
+
         </script>
     </body>
 </html></html>
