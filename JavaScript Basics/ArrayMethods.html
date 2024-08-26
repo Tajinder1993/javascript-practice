@@ -67,6 +67,64 @@
             //concat() it is used to merge many array into one array
             document.write(`<br> Concat() concat three arrays into one. ${fruits.concat(vegi,arr)}`)
 
+            //copyWithin() method is used to copy the part of an array to another location
+            //it takes 3 arguments
+            // 1. target : index at which to start to copying
+            // 2. start : index from where to start copying
+            // 3. end : specify the index until which element is to copied.
+            
+            document.write(`<br> Elements of Array fruits before copywithin(). ${fruits}`)
+
+            const copiedArray = fruits.copyWithin(3,0,2);
+            //end value is exclusive
+            // it modify the existing array rather then creating the new array
+            document.write(`<br> Elemetns of array fruits after the function.${copiedArray}`)
+
+            //Flattening - it means conver the many dimensinal array into one dimesnaional array
+            // flat() - this function perform the function of flatrttening of an array
+            //create an two dimensional array
+            const arr2D = [[5,6],[4,8],[7,90,67]]
+            document.write(`<br> display two dimensional array.${arr2D}`)
+            // flaten the 2D array into one D array
+            const flatArr = arr2D.flat();
+            document.write(`<br> Flatenned array. ${flatArr}`)
+
+            //flatMap() - it modify the flatenning procedure as we can modify the existing array element while flatennig.
+            // it works for one Dimensional array
+            /*
+            After applying the mapping function to each element,
+            flatMap() flattens the resulting arrays into a single array with a depth of 1.
+            So, if flatArr was [1, 2, 3],
+            the mapped results would be [[1, 3], [2, 4], [3, 5]].
+            flatMap() would then flatten this into [1, 3, 2, 4, 3, 5]*/
+            const flatMapArr = flatArr.flatMap(Value => [Value, Value+2])
+            document.write(`<br> FlatMap Array. ${flatMapArr}`)
+
+            //splice() : it add a new item into an array at a specified location 
+            // it is also used to remove an element form an array
+            // first parameter indicate the index number
+            // 2 to remove the element from an array
+            // 3 to insert elements
+            // it modify the existing array
+            document.write(`<br> Elements of vegi array.  ${vegi}`)
+            vegi.splice(2,0,"bittermelon","red delicious apple")
+            document.write(`<br> add some more vegis.${vegi}`)
+            document.write(`<br> Now add some more vegis but at the place of okra and edos`)
+            vegi.splice(4,2,"spniach","watercress")
+            document.write(`<br> Now the list of vegis is : ${vegi}`)
+            document.write(`<br> now remove the red delicious apple as it is not a vegi but don't add the new element`);
+            vegi.splice(vegi.length-1, 1)
+            document.write(`<br> Now the list of vegi is : ${vegi}`)
+
+            //toSpliced() : it has same function as the splice() but it creates the new array
+            // keep unchange the original array
+            document.write(`<br> array element before the toSpliced() : ${flatArr}`)
+            document.write(`<br> Array element when function runs. ${flatArr.toSpliced(2,3)}`)
+            document.write(`<br> array element after the toSpliced() : ${flatArr}`)
+
+
+
+
 
             
 
