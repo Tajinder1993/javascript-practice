@@ -21,7 +21,7 @@
             document.write(`<br> Convert an array to a string. ${arr.toString()}`)
             document.write(`<br> Check the type of an array after the conversion into string. ${typeof arr.toString()}`)
 
-            // at() function is ussed to access an array element like the []
+            // at() function is used to access an array element like the []
             // it support the negative indexing as well 
             document.write(`<br> access the first element of an array using the at(). ${arr.at(5)} `)
 
@@ -49,6 +49,24 @@
             //delete() method the element from an array at particular position but create a holes.
             delete arr[2];
             document.write(`<br> Array elements after the deleting the 3 element. ${arr}`)
+
+            //Merging an array
+            // concar method()
+            const fruits =["Apple","Mango","Pine-apple","Grapes","Litchi","cantaloupe","Melon"]
+            const vegi = ["Peas", "Eggplant","Edoes","Okra","Green papper"]
+
+            document.write(`<br> concat() : join one array with the another array. ${fruits.concat(vegi)}`)
+
+            //concat() array with the string value
+            document.write(`<br> concat() : concat array with the string value. ${fruits.concat("Guava")}`)
+
+            //concat() it does not change the original array as it create a new array.
+            document.write(`<br> orginal array elements of fruits. ${fruits}`)
+            document.write(`<br> original elements of an array vegi. ${vegi}`)
+
+            //concat() it is used to merge many array into one array
+            document.write(`<br> Concat() concat three arrays into one. ${fruits.concat(vegi,arr)}`)
+
 
             
 
