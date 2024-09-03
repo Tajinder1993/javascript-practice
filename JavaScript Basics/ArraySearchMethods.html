@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Array Search Methods</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
@@ -11,6 +11,61 @@
     <body>
    
         
-        <script async defer></script>
+        <script defer>
+            const fruits = ["Apple", "Mango","Apple","Grapes","Litchi","Apple","Pine-Apple","Guava"]
+
+            /*
+            indexOf() - Method
+            definition : it returns the index of the array element
+            rules :
+            1. return -1 if the element is not present in an array
+            2. accept the negative value
+            3. if the element is duplicate the within the array, it return the index of the first occurance of the element
+            4. it is case sensitive method
+            5. user can declare the start value in as a second parameter in the method
+            6. it accepts the negative value then start count from end and search towards the end.
+            */
+
+            document.write(`<br> Array elements of fruits are : ${fruits}`)
+            document.write(`<br> indexOf() - find the index of the array element. ${fruits.indexOf("Apple")}`)
+            document.write(`<br> Find the indexOf of the apple but start searching from the 3rd position. ${fruits.indexOf("Apple",3)}`)
+            document.write(`<br> Find the index of element which is not present in an fruits array.${fruits.indexOf("Plum")}`)
+
+            /*
+            lastIndexOf() : this method search the element from the end.
+            rules :
+            1. return the index of the element of the which comes at last as it start searching from the end.
+            2. return the -1 if the element is not present in an array.
+            3. Accept the second argument as a start position to search an element.
+            4. Accept the negative value of start and counts from end and search towards the beginning
+            */
+
+            document.write(`<br> lastIndexOf() - search from the end and return the index of the element.${fruits.lastIndexOf("Pine-Apple")}`)
+
+            /*
+            includes() : it checks the element is a part of the string and return true if the element is present.
+            */
+            document.write(`<br> inludes() - find the elements is present within the array. ${fruits.includes("Litchi")}`)
+            document.write(`<br> inludes() - find the elements is present within the array. ${fruits.includes("Tajinder")}`)
+
+            /*
+            find() : this function also find the element within the array but it return the array element.
+            it work on an function and the which meet function display on the screen.
+            */
+
+            const numbers = [89,78,80,454,45,56,34,6,4,3,5]
+
+            document.write(`<br> array of numbers is :${numbers}`)
+            function findNumbers(value, index, array){
+                return value > 400;
+            }
+            document.write(`<br> Find the array element which is greater than 400 is = ${numbers.find(findNumbers)}`)
+
+            document.write(`<br> Find the array element less then 5 is = .${numbers.find(value =>value < 5)}`)
+
+
+
+
+        </script>
     </body>
 </html>
