@@ -53,7 +53,7 @@
             it work on an function and the which meet function display on the screen.
             */
 
-            const numbers = [89,78,80,454,45,56,34,6,4,3,5]
+            const numbers = [89,78,80,454,45,56,34,480,6,4,3,5]
 
             document.write(`<br> array of numbers is :${numbers}`)
             function findNumbers(value, index, array){
@@ -61,9 +61,23 @@
             }
             document.write(`<br> Find the array element which is greater than 400 is = ${numbers.find(findNumbers)}`)
 
-            document.write(`<br> Find the array element less then 5 is = .${numbers.find(value =>value < 5)}`)
+            document.write(`<br> Find the array element less then 5 is = ${numbers.find(value =>value < 90)}`)
 
+            /*
+            findIndex() : return the index first array element that passes the test function
+            */
+            document.write(`<br> findIndex() : return the index of the first element that pass test function. ${numbers.findIndex(value => value<67)}`)
 
+            /*
+            findLast() : it start finding the element from the last and return the element that pass the test function.
+            it return the element that pass the test function at first.
+            */
+           document.write(`<br> findLast() - search the element from the last.${numbers.findLast(value=> value>180)}`)
+
+           /*
+           findLastIndex() : it return the last index of the element that pass the test function first
+           */
+          document.write(`<br> findLastIndex() : it return the index of the element that satisfy the test function. ${numbers.findLastIndex(value=> value>500)}`)
 
 
         </script>
