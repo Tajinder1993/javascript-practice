@@ -1,0 +1,49 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Array Sort Methods</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+      
+        
+        <script async defer>
+        /*
+        sort() : sort method used to sort the element in an ascending order.
+        1. it works well for the string not for the numbers.
+        */
+
+        const arr = ["Apple", "Mango", "Pine-apple", "Litchi", "plum","apple"]
+        document.write(" The elements of fruit array are : "+ arr+"<br>")
+        document.write(`<br> sort() : it sort an array element in an ascending order. <br> ${'&nbsp;'.repeat(10)} ${arr.sort()}`)
+
+        /*
+        now apply the sort function to sort an string numbers. 
+        it does not work accuratly on string numbers as it treat string numbers as a alphabet
+        */
+       const numbers = ["45","89","100","59","23"]
+       document.write(" <br><br>The elements of numbers array are : "+ numbers+"<br>")
+       document.write(`<br> sort() : does not work well to sort the number string. <br>${'&nbsp;'.repeat(10)} ${numbers.sort()}`)
+
+       /*
+       sort() now sort the numbers with the function instead of the string numbers
+       */
+
+       const number = [45,89,100,59,23]
+       document.write(`<br> sort() : this function also does not work accurately to sort the number only. <br> ${'&nbsp;'.repeat(10)} ${number.sort()}`)
+
+       /*
+       reverse() : this method reverse an array element
+       */
+      document.write(`<br><br> Array elements of fruits array before the reverse function. <br>${'&nbsp;'.repeat(14)} ${arr}`)
+      document.write(`<br> reverse() : reverse an array element of fruits array. <br>${'&nbsp;'.repeat(14)} ${arr.reverse()}`)
+
+      document.write(`<br><br>Array elements of an numbers array before the reverse function. <br>${'&nbsp;'.repeat(14)} ${numbers}`)
+      document.write(`<br> reverse() : reverse an array element of numbers array. <br>${'&nbsp;'.repeat(14)} ${numbers.reverse()}`)
+        </script>
+    </body>
+</html>
