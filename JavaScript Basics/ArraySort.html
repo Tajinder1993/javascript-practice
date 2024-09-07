@@ -57,6 +57,23 @@
 
      document.write(`<br> sort() : sorted the elements of an array. <br> ${'&nbsp;'.repeat(14)} ${name.sort()}`)
      document.write(`<br> Now the elements of an array in an descending order. <br> ${'&nbsp;'.repeat(14)} ${name.reverse()}`)
+
+     /*
+     toSorted() :- it sort the array but create a new sorted array without modifying the existing array
+     */
+    const arr1 = ["d","g","x","r","p","e","s"]
+    document.write(`<br><br> Elements of an array : <br> ${'&nbsp;'.repeat(14)} ${arr1}`)
+    document.write('<br> toSorted() : it sorts an array element without modifying the original array.')
+    document.write(`<br> ${'&nbsp;'.repeat(14)} ${arr1.toSorted()}`)
+    document.write(`<br> the orginal array elements are unchanged: <br> ${'&nbsp;'.repeat(14)} ${arr1}`)
+
+    /*
+    toReversed() : it perform the same function as reverse() but without modifying the original array.
+    */
+
+    document.write(`<br> toReversed() : it perform the reverse function and create a new reversed array. <br> ${'&nbsp;'.repeat(14)} ${arr1.toReversed()}`)
+    document.write(`<br> the orginal array elements are unchanged: <br> ${'&nbsp;'.repeat(14)} ${arr1}`)
+
         </script>
     </body>
 </html>
