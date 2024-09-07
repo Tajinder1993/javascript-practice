@@ -74,6 +74,17 @@
     document.write(`<br> toReversed() : it perform the reverse function and create a new reversed array. <br> ${'&nbsp;'.repeat(14)} ${arr1.toReversed()}`)
     document.write(`<br> the orginal array elements are unchanged: <br> ${'&nbsp;'.repeat(14)} ${arr1}`)
 
+    /*
+    numeric sort
+    the compare functiin is used to perform the sorting of the numbers string.
+    it produce accurate result as compare to the sor()
+    */
+
+    document.write(`<br><br> Elements of an number array. <br> ${'&nbsp;'.repeat(14)} ${numbers}`)
+    document.write(`<br> sor() function sort the numbers like an string. <br> ${'&nbsp;'.repeat(14)} ${numbers.sort()}`)
+    document.write(`<br> sort() with compare function is more accurate for the number string. <br> ${'&nbsp;'.repeat(14)} ${numbers.sort(function(a,b){return a-b})}`)
+    document.write(`<br> sort() the numbers in descending order with the compare function() <br> ${'&nbsp;'.repeat(14)} ${numbers.sort(function(a,b){return b-a})} `)
+
         </script>
     </body>
 </html>
