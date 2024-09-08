@@ -85,6 +85,29 @@
     document.write(`<br> sort() with compare function is more accurate for the number string. <br> ${'&nbsp;'.repeat(14)} ${numbers.sort(function(a,b){return a-b})}`)
     document.write(`<br> sort() the numbers in descending order with the compare function() <br> ${'&nbsp;'.repeat(14)} ${numbers.sort(function(a,b){return b-a})} `)
 
+    /*
+    Finding the maximum and minimum value 
+    1. find the value by sorting the element an then access the first element for 
+    smallest element and last element for the largest element.
+    */
+   document.write(`<br> <br> Finding the maximum and minimum value.`)
+   document.write(`<br> The elements of an number array. ${numbers.reverse()}`)
+   document.write(`<br> The minimum element of an array is : ${numbers[0]}`)
+   document.write(`<br> The maximum element of an array is : ${numbers[numbers.length-1]}`)
+
+   /*
+   Find the maximum and minimum element form an array using Math.max.apply() and Math.min.apply() function
+   */
+  document.write(`<br> The maximum element of an array number is : ${maxMin(numbers)}`)
+  function maxMin(arr){
+    return Math.max.apply(null,arr)
+  }
+
+  document.write(`<br> The minimum element of an array number is : ${minMax(numbers)}`)
+  function minMax(arr)
+  {
+    return Math.min.apply(null,arr);
+  }
         </script>
     </body>
 </html>
