@@ -108,6 +108,45 @@
   {
     return Math.min.apply(null,arr);
   }
-        </script>
+
+  /*
+  finding the maximum and minimum element with the help of traditional logic
+  */
+
+  const num = [56,45,67,2,34,65,20]
+  document.write(`<br><br> The element of an array number is : ${num}`)
+
+  document.write(`<br> Finding the maximum number using traditional method.`)
+  let min = num[0];
+  num.forEach(element => {
+
+    if(element<min){
+        min = element
+    }
+  });
+  document.write(`<br> Minimum element is : ${min}`)
+
+  document.write(`<br> Finding the maximum number using traditional method.`)
+  let max = num[0];
+  num.forEach(element => {
+
+    if(element>max){
+        max = element
+    }
+  });
+  document.write(`<br> Minimum element is : ${max}`)
+
+  /*
+  create an array of object
+  to show the array of objects the JSON.stringfy() function is used
+  */
+
+  const stuInfo = [
+    {name : "Tajinder", id:"C0861062"},
+    {name :"Satwinder", id:"C0859862"},
+  ]
+  document.write(`<br> <br> The array of objects is : ${stuInfo[0].name}`)
+  document.write(`<br> Acces the first array of object : <br>${'&nbsp;'.repeat(14)}${JSON.stringify(stuInfo)}`)
+    </script>
     </body>
 </html>
