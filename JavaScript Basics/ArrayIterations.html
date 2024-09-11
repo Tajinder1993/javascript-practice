@@ -1,0 +1,55 @@
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Array iterations</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+     
+        
+        <script async defer>
+            const names= ["Tajinder","Daljinder","Manjinder","Satwinder"]
+            const number = [45,78,99,23,78,40];
+
+            /*
+            forEach() : this method is used to iter through the array elements.
+            */
+
+            document.write(`<br> Iter an array element by forEach() method.`)
+            names.forEach(functionArray);
+            function functionArray(value){
+                return document.write(`<br> ${'&nbsp;'.repeat(10)} ${value}`)
+            }
+
+            /*
+            map() - it used to create a new array from an existing array.
+            it perform the function on each array element
+            it does not change the original array.
+            */
+           const mapArray = number.map(functionMap)
+
+           function functionMap(value){
+            return value = value +100;
+           }
+           document.write("<br><br>Array element before mapping are :"+ number)
+           document.write("<br> Array element after the mapping are : "+mapArray)
+
+           /*
+           flatMap() - this function first map the array then create a new array.
+           */
+
+           document.write("<br><br> Array element before the flatmap() function are :"+number)
+           const flatmaparray1 = number.flatMap(x => [x,x+200])
+           document.write("<br> Array element after the mapping with th e flaMap() : "+ flatmaparray1)
+
+           /*
+           filter()
+           */
+        
+        </script>
+    </body>
+</html>
