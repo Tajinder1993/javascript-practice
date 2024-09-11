@@ -47,8 +47,96 @@
            document.write("<br> Array element after the mapping with th e flaMap() : "+ flatmaparray1)
 
            /*
-           filter()
+           filter() : this method creates a new array but 
+           it include the array elements which pass the test condition.
            */
+
+           document.write("<br><br> Array element before the filter() function are :"+number)
+
+           const filterarray = number.filter(functionFilter)
+           function functionFilter(value)
+           {
+            return value>50;
+           }
+           document.write("<br> array element which is greater than 50 are : "+filterarray)
+
+           /*
+           every() : it return the result true or false.
+           it checks avery array element pass the conditions if yes it return the result true otherwise false.
+           */
+
+           document.write("<br><br> Array element before the every() function are :"+number)
+           const res = number.every(value => value>50)
+           document.write("<br> check all array  elements are greater than the 50. "+res)
+
+           /*
+           some() - it checks whether some of the element satisfy the test function
+           if some elements pass the test function then return true if neither then false.
+           */
+           document.write("<br><br> Array element before the some() function are :"+number)
+           const res1 = number.some(x => x > 60)
+           document.write("<br>checks array has elements greater than 60. "+res1)
+
+           /*
+           Array.from() : this function is used to convert the string into an array and make it an iterable array elements
+           */
+          let name ="Tajinder";
+          const namearray = Array.from(name);
+          document.write("<br> An string is converted into an array. "+ namearray)
+
+          /*
+          keys() : it return the index value of the array elements but the 
+          nature is array iterator object so for loop is ussed to iter through elements
+
+          */
+          document.write("<br><br> Array element of the number array are :"+number)
+          const key = number.keys();
+
+          for(x of key){
+             document.write("<br><br> keys of the number array are  :"+x)
+          }
+
+          /*
+          entries() : it is same as keys() but it make the array elements array iterable objects.
+          iterate over key/value pair
+          */
+
+          document.write("<br><br> Array element  of names array are :"+names)
+          const values = names.entries();
+
+          for(x of values){
+            document.write("<br> name is = "+x)
+          }
+
+          /*
+          with() : this method is used to add an array element in a safe way
+          it did not change the original array.
+          it keep the array length unchange and replace the existing element with the new one
+          */
+
+          document.write("<br><br> Array element  of names array are :"+names)
+          const newarray = names.with(3, "Amitoj Singh");
+          document.write("<br><br> Array element  of new array are :"+ newarray)
+
+          /*
+          array spread (...) : this method combine many array elements into one array
+          */
+         const arr1 = ["sunday","monday","tuesday"]
+         const arr2 = ["thursday","friday"]
+         const arr3 = ["Satureday","sunday"]
+
+         const daysOfWeek = [...arr1, ...arr2, ...arr3]
+         document.write("<br><br> Array element  arr1 array are :"+arr1)
+         document.write("<br> Array element  arr2 array are :"+arr2)
+         document.write("<br> Array element  arr2 array are :"+arr3)
+
+         document.write("<br><br> Array element array arr1, arr2 and arr3 togehter are : "+ daysOfWeek)
+
+
+
+
+
+
         
         </script>
     </body>
