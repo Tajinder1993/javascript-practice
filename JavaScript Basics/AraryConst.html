@@ -11,6 +11,39 @@
     <body>
    
         
-        <script async defer></script>
+        <script async defer>
+            /*
+            array are declared with the const keyword. it is a common practice to declare array with the const keyword
+            */
+           const arr = [78,89,43,56,45,34,56];
+
+           /*
+           array once declare with the const keyword cannot be redeclared again
+           but array element can be changed after intialization or declaration
+           */
+         // const arr = [45,78,90,34] // it genrate the error
+         document.write("<br> Array elements are : "+ arr)
+            arr[3] =67;
+            arr[4] = 78;
+            document.write("<br> Some of the Array elements are changes."+arr)
+
+            /*
+            when array is declared it should be intialized if array is declared with the const keyword
+            */
+           name = ["tajinder","satwinder","Manjinder"]
+          // const name; // it gives error
+          var name; // with var keyword array can be intialized and declare after the initialization
+
+          /*
+          const keyword has a block scope.
+          */
+            
+          const names = ["tajinder","satwinder"]
+          document.write("<br> Array name outside the block scope "+names)
+          {
+            const names = ["Manjinder", "Daljinder"]
+            document.write("<br> Array names inside the block scope. "+names)
+          }
+        </script>
     </body>
 </html>
