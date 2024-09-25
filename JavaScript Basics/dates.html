@@ -11,6 +11,21 @@
     <body>
      
         
-        <script async defer></script>
+        <script async defer>
+            document.write(" <h1> Work with dates </h1>")
+            document.write(" <br> Creating the date object with the new keyword.")
+            
+            // date objects are always constants
+            const d = new Date()
+            //by default date and time is displayed in form of string.
+            // tue sep 24 2024 23:20:23 gmt - 0400 (eastern dalylight time)
+            document.writeln("<br>"+ "&nbsp".repeat(10)+d)
+            
+            //declare the date object with string.
+            const d1 = new Date("2024-09-24")
+            document.writeln("<br>"+"&nbsp".repeat(10)+d1)
+
+
+        </script>
     </body>
 </html>
